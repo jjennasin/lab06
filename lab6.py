@@ -14,27 +14,7 @@ def encode(string):  # adds 3 to each digit
         encoded += str(i)
     return encoded
 
-def decode():
-    global encoded
 
-    result = ''
-
-    if encoded == None:
-        return 'Error'
-
-    for i in encoded:
-
-        i = int(i)
-        if i <= 2:
-            i = i + 7
-        else:
-            i -= 3
-
-        i = str(i)
-
-        result += i
-
-    return result
 
 
 
@@ -56,5 +36,5 @@ if __name__ == "__main__":
             string = input("Please enter your password to encode: ")
             encode(string)
             print("Your password has been encoded and stored!")
-        if choice == 2:
-            print(f"The encoded password is {encoded}, and the original password is {decode()}.")
+        # if choice == 2:
+        #     print(f"The encoded password is {encoded}, and the original password is {decode()}.")
